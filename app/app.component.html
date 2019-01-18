@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to Tasks!
+  </h1>
+</div>
+<button (click) = "runButton()">Show all Tasks!</button>
+<ul>
+  <li *ngFor="let x of tasks">
+    <h3>{{ x.title }}</h3>
+    <button (click) = "showButton(x._id)">Show</button>
+  </li>
+</ul>
+<h2>{{ change.title }}</h2>
+<p>{{ change.description }}</p>
+
+<router-outlet></router-outlet>
